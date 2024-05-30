@@ -1,9 +1,10 @@
 import "./App.css";
+import { Upload } from "./components/Upload/Upload";
 
 function App() {
   return (
     <>
-      <h1>Test 2 for forking</h1>
+    <Upload/>
     </>
   );
 }
