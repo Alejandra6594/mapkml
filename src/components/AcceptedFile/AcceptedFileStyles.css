@@ -1,0 +1,20 @@
+.container-accep-file {
+
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+
+  .img-file {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .name-file {
+    margin: .4rem 0;
+    font-size: .8rem;
+  }
+}

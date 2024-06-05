@@ -1,8 +1,21 @@
-body{
+body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 5rem;
-  
+
+}
+
+.header-section-app {
+  background-color: #8080802b;
+  padding: 1rem;
+
+  .title {
+    margin: 0;
+  }
+
+  .description {
+    margin: 1rem 0;
+  }
 }
