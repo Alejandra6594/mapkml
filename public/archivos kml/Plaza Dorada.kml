@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Plaza Dorada</name>
+	<gx:CascadingStyle kml:id="__managed_style_0C105AADCB3124D8CA54">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffa21f7b</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>80bc47ab</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_10CAF1A7333124D8CA53">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ffa21f7b</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>80bc47ab</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_02B57275033124D8CA53">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_10CAF1A7333124D8CA53</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0C105AADCB3124D8CA54</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0563E865593124D730ED">
+		<name>Plaza Dorada</name>
+		<LookAt>
+			<longitude>-89.65233618376062</longitude>
+			<latitude>20.99338866545549</latitude>
+			<altitude>18.33677638263011</altitude>
+			<heading>103.1756873194574</heading>
+			<tilt>0</tilt>
+			<gx:fovy>82.45339048591963</gx:fovy>
+			<range>181.9099796039336</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_02B57275033124D8CA53</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-89.651863149894,20.99427349272741,0 -89.65249984722215,20.99447938401138,0 -89.65273422388205,20.99399681939505,0 -89.65325991172377,20.99422054881279,0 -89.65378641215612,20.99331355361673,0 -89.65288850546892,20.9930125032062,0 -89.65229166270792,20.99280064953367,0 -89.65165262268859,20.99261309792903,0 -89.65139535009526,20.99315919411293,0 -89.65128570466163,20.99350773889407,0 -89.65162023867597,20.99362362700542,0 -89.65191153131487,20.99373286776077,0 -89.65200648581113,20.99377515795944,0 -89.651863149894,20.99427349272741,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
