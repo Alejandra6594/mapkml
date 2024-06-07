@@ -1,43 +1,22 @@
-import { useCallback } from "react";
-import { useDropzone } from "react-dropzone";
-
+import { useContext } from "react";
 import { AcceptedFile } from "../AcceptedFile/AcceptedFile";
+
+import { MapFileContext } from "../../context/MapFileContext";
 
 import "./FileUploaderStyles.css";
 export const FileUploader = ({ onFileLoad }) => {
-  const onDrop = useCallback(
-    (acceptedFiles) => {
-      console.log(acceptedFiles);
-
-      // acceptedFiles.forEach((file) => {
-      //   const reader = new FileReader();
-      //   reader.onload = () => {
-      //     const text = reader.result;
-      //     onFileLoad(text);
-      //   };
-      //   reader.readAsText(file);
-      // });
-    },
-    // [onFileLoad]
-    []
-  );
-
   const {
     getRootProps,
     getInputProps,
     isDragActive,
     acceptedFiles,
     fileRejections,
-  } = useDropzone({
-    onDrop,
-    accept: {
-      "application/vnd.google-earth": [".kml"],
-    },
-  });
-  console.log(getRootProps());
-  console.log(getInputProps());
-  console.log(acceptedFiles);
-  console.log(fileRejections);
+  } = useContext(MapFileContext);
+
+  const testClick = () => {
+    console.log("habilitado");
+  };
+
   return (
     <section className="container-upload">
       <article className="info-upload">
@@ -131,7 +110,13 @@ export const FileUploader = ({ onFileLoad }) => {
         <aside className="side-file-info"></aside>
         <aside className="side-add-file">
           <section className="container-upload-button">
-            <button className="btn-upload">Pintar archivos</button>
+            <button
+              className="btn-upload"
+              disabled={acceptedFiles.length > 0 ? false : true}
+              onClick={testClick}
+            >
+              Pintar archivos
+            </button>
           </section>
         </aside>
       </article>

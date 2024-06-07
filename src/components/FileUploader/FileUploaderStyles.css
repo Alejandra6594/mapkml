@@ -137,6 +137,13 @@
 
                     &:hover {
                         cursor: pointer;
+
+                    }
+
+                    &:disabled {
+
+                        background-color: gray;
+                        cursor: auto;
                     }
                 }
             }

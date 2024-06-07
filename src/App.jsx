@@ -1,5 +1,7 @@
 import "./App.css";
 import { FileUploader } from "./components/FileUploader/FileUploader";
+import { KmlMap } from "./components/KmlMap/KmlMap";
+import { MapFileContextProvider } from "./context/MapFileContext";
 
 function App() {
   return (
@@ -11,12 +13,13 @@ function App() {
           a los usuarios cargar archivos KML (Keyhole Markup Language),
           visualizar su contenido geoespacial en un mapa interactivo y exportar
           los datos geoespaciales a un script SQL. Utiliza react-dropzone para
-          crear una zona drag'n'drop compatible con HTML5 para archivos, Leaflet
-          para la visualización de mapas y la biblioteca leaflet-kml para
-          manejar y renderizar archivos KML en el mapa.
+          crear una zona drag & drop, Leaflet para la visualización de mapas y
+          la biblioteca leaflet-kml para manejar y renderizar archivos KML en el
+          mapa.
         </p>
       </header>
       <FileUploader />
+      <KmlMap />
     </section>
   );
 }
