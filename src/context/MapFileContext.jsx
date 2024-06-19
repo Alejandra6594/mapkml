@@ -1,9 +1,11 @@
-import { createContext, useCallback } from "react";
+import { createContext, useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
 export const MapFileContext = createContext();
 
 export const MapFileContextProvider = (props) => {
+  const [renderMap, setRenderMap] = useState(false);
+
   const { children } = props;
 
   const onDrop = useCallback(
@@ -22,6 +24,11 @@ export const MapFileContextProvider = (props) => {
     // [onFileLoad]
     []
   );
+
+  const handleRenderMap = () => {
+    setRenderMap(!renderMap);
+  };
+
   const {
     getRootProps,
     getInputProps,
@@ -41,6 +48,8 @@ export const MapFileContextProvider = (props) => {
     isDragActive,
     acceptedFiles,
     fileRejections,
+    handleRenderMap,
+    renderMap,
   };
   return (
     <MapFileContext.Provider value={data}>{children}</MapFileContext.Provider>

@@ -11,11 +11,8 @@ export const FileUploader = ({ onFileLoad }) => {
     isDragActive,
     acceptedFiles,
     fileRejections,
+    handleRenderMap,
   } = useContext(MapFileContext);
-
-  const testClick = () => {
-    console.log("habilitado");
-  };
 
   return (
     <section className="container-upload">
@@ -113,7 +110,7 @@ export const FileUploader = ({ onFileLoad }) => {
             <button
               className="btn-upload"
               disabled={acceptedFiles.length > 0 ? false : true}
-              onClick={testClick}
+              onClick={handleRenderMap}
             >
               Pintar archivos
             </button>

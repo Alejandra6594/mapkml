@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import "./App.css";
 import { FileUploader } from "./components/FileUploader/FileUploader";
 import { KmlMap } from "./components/KmlMap/KmlMap";
-import { MapFileContextProvider } from "./context/MapFileContext";
+import { MapFileContext } from "./context/MapFileContext";
 
 function App() {
+  const { renderMap } = useContext(MapFileContext);
   return (
     <section>
       <header className="header-section-app">
@@ -18,8 +20,8 @@ function App() {
           mapa.
         </p>
       </header>
-      <FileUploader />
-      <KmlMap />
+
+      {renderMap ? <KmlMap /> : <FileUploader />}
     </section>
   );
 }
