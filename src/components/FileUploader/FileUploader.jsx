@@ -9,7 +9,7 @@ export const FileUploader = ({ onFileLoad }) => {
     getRootProps,
     getInputProps,
     isDragActive,
-    acceptedFiles,
+    copyAcceptedFiles,
     fileRejections,
     handleRenderMap,
   } = useContext(MapFileContext);
@@ -41,9 +41,9 @@ export const FileUploader = ({ onFileLoad }) => {
               Tamaño máximo para archivos nuevos:{" "}
               <strong style={{ color: "blue" }}>ilimitado</strong>, archivos
               anexados:
-              {acceptedFiles.length > 0 ? (
+              {copyAcceptedFiles.length > 0 ? (
                 <strong style={{ color: "blue" }}>
-                  {acceptedFiles.length}
+                  {copyAcceptedFiles.length}
                 </strong>
               ) : (
                 0
@@ -82,9 +82,9 @@ export const FileUploader = ({ onFileLoad }) => {
                 <p>Suelte los archivos aqui...</p>
               ) : (
                 <div className="zone-accept-file">
-                  {acceptedFiles.length > 0 ? (
+                  {copyAcceptedFiles.length > 0 ? (
                     <ul className="list-file-accepts">
-                      {acceptedFiles.map((file) => (
+                      {copyAcceptedFiles.map((file) => (
                         <li className="item-file-accepts" key={file.path}>
                           <AcceptedFile nameFile={file.path} />
                         </li>
@@ -109,7 +109,7 @@ export const FileUploader = ({ onFileLoad }) => {
           <section className="container-upload-button">
             <button
               className="btn-upload"
-              disabled={acceptedFiles.length > 0 ? false : true}
+              disabled={copyAcceptedFiles.length > 0 ? false : true}
               onClick={handleRenderMap}
             >
               Pintar archivos

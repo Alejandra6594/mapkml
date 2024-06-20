@@ -2,13 +2,14 @@ import { useContext } from "react";
 import { MapFileContext } from "../../context/MapFileContext";
 
 export const KmlMap = () => {
-  const { acceptedFiles, handleRenderMap } = useContext(MapFileContext);
+  const { handleRenderMap, validateFile } = useContext(MapFileContext);
+  console.log("validate copy" + validateFile);
   return (
     <section>
       <button onClick={handleRenderMap}>Pintar nuevos archivos</button>
       <h2>Renderizado de archivos en el mapa</h2>
       <ul>
-        {acceptedFiles.map((file) => (
+        {validateFile.map((file) => (
           <li key={file.path}>{file.path}</li>
         ))}
       </ul>
