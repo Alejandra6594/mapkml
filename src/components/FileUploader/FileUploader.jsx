@@ -12,6 +12,7 @@ export const FileUploader = ({ onFileLoad }) => {
     copyAcceptedFiles,
     fileRejections,
     handleRenderMap,
+    copiFileRejections,
   } = useContext(MapFileContext);
 
   return (
@@ -19,14 +20,14 @@ export const FileUploader = ({ onFileLoad }) => {
       <article className="info-upload">
         <aside className="side-file-info">
           <h4 className="side-title">Añadir archivos KML</h4>
-          <p className={`${fileRejections.length > 0 ? "fileRejection" : ""}`}>
+          <p className={`${copiFileRejections.length > 0 ? "fileRejection" : ""}`}>
             Solo se permite la carga de archivos KML
           </p>
-          {fileRejections.length > 0 ? (
+          {copiFileRejections.length > 0 ? (
             <div className="zone-files-rejects">
               <h4 className="title-file-reject">Archivos rechazados:</h4>
               <ul className="list-files-rejects">
-                {fileRejections.map((fileReject) => (
+                {copiFileRejections.map((fileReject) => (
                   <li className="item-file-reject" key={fileReject.file.name}>
                     🔴{fileReject.file.name}
                   </li>

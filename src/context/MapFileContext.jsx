@@ -9,12 +9,14 @@ export const MapFileContextProvider = (props) => {
   const [renderMap, setRenderMap] = useState(false);
   const [validateFile, setValidateFile] = useState([]);
   const [copyAcceptedFiles, setCopyAcceptedFiles] = useState([]);
+  const [copiFileRejections, setCopiFileRejections] = useState([]);
 
   const onDrop = useCallback(
-    (acceptedFiles) => {
+    (acceptedFiles, fileRejections) => {
       console.log(`Archivos aceptados:}` + acceptedFiles);
       setValidateFile([...acceptedFiles]);
       setCopyAcceptedFiles([...acceptedFiles]);
+      setCopiFileRejections([...fileRejections])
       // console.log(`Copia` + copyAcceptedFiles);
       // acceptedFiles.forEach((file) => {
       //   const reader = new FileReader();
@@ -38,6 +40,7 @@ export const MapFileContextProvider = (props) => {
   const handleRenderMap = () => {
     setRenderMap(!renderMap);
     setCopyAcceptedFiles([]);
+    setCopiFileRejections([]);
   };
   let data = {
     getRootProps,
@@ -48,6 +51,7 @@ export const MapFileContextProvider = (props) => {
     handleRenderMap,
     renderMap,
     validateFile,
+    copiFileRejections,
   };
   return (
     <MapFileContext.Provider value={data}>{children}</MapFileContext.Provider>
