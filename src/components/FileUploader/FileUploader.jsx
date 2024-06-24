@@ -9,10 +9,9 @@ export const FileUploader = ({ onFileLoad }) => {
     getRootProps,
     getInputProps,
     isDragActive,
-    copyAcceptedFiles,
-    fileRejections,
+    validateFile,
     handleRenderMap,
-    copiFileRejections,
+    rejectedFiles,
   } = useContext(MapFileContext);
 
   return (
@@ -20,14 +19,14 @@ export const FileUploader = ({ onFileLoad }) => {
       <article className="info-upload">
         <aside className="side-file-info">
           <h4 className="side-title">Añadir archivos KML</h4>
-          <p className={`${copiFileRejections.length > 0 ? "fileRejection" : ""}`}>
+          <p className={`${rejectedFiles.length > 0 ? "fileRejection" : ""}`}>
             Solo se permite la carga de archivos KML
           </p>
-          {copiFileRejections.length > 0 ? (
+          {rejectedFiles.length > 0 ? (
             <div className="zone-files-rejects">
               <h4 className="title-file-reject">Archivos rechazados:</h4>
               <ul className="list-files-rejects">
-                {copiFileRejections.map((fileReject) => (
+                {rejectedFiles.map((fileReject) => (
                   <li className="item-file-reject" key={fileReject.file.name}>
                     🔴{fileReject.file.name}
                   </li>
@@ -42,10 +41,8 @@ export const FileUploader = ({ onFileLoad }) => {
               Tamaño máximo para archivos nuevos:{" "}
               <strong style={{ color: "blue" }}>ilimitado</strong>, archivos
               anexados:
-              {copyAcceptedFiles.length > 0 ? (
-                <strong style={{ color: "blue" }}>
-                  {copyAcceptedFiles.length}
-                </strong>
+              {validateFile.length > 0 ? (
+                <strong style={{ color: "blue" }}>{validateFile.length}</strong>
               ) : (
                 0
               )}
@@ -83,9 +80,9 @@ export const FileUploader = ({ onFileLoad }) => {
                 <p>Suelte los archivos aqui...</p>
               ) : (
                 <div className="zone-accept-file">
-                  {copyAcceptedFiles.length > 0 ? (
+                  {validateFile.length > 0 ? (
                     <ul className="list-file-accepts">
-                      {copyAcceptedFiles.map((file) => (
+                      {validateFile.map((file) => (
                         <li className="item-file-accepts" key={file.path}>
                           <AcceptedFile nameFile={file.path} />
                         </li>
@@ -110,7 +107,7 @@ export const FileUploader = ({ onFileLoad }) => {
           <section className="container-upload-button">
             <button
               className="btn-upload"
-              disabled={copyAcceptedFiles.length > 0 ? false : true}
+              disabled={validateFile.length > 0 ? false : true}
               onClick={handleRenderMap}
             >
               Pintar archivos
