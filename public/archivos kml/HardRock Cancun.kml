@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
-	<name>La Isla</name>
-	<gx:CascadingStyle kml:id="__managed_style_04F32847C43187A0E24E">
+	<name>HardRock Cancun</name>
+	<gx:CascadingStyle kml:id="__managed_style_2C9E33D67631879A5F91">
 		<Style>
 			<IconStyle>
 				<scale>1.2</scale>
@@ -25,7 +25,7 @@
 			</BalloonStyle>
 		</Style>
 	</gx:CascadingStyle>
-	<gx:CascadingStyle kml:id="__managed_style_11FBF9C10D3187A0E24D">
+	<gx:CascadingStyle kml:id="__managed_style_1A88B36BF031879A5F91">
 		<Style>
 			<IconStyle>
 				<Icon>
@@ -47,38 +47,32 @@
 			</BalloonStyle>
 		</Style>
 	</gx:CascadingStyle>
-	<StyleMap id="__managed_style_0D856552F93187A0E24D">
+	<StyleMap id="__managed_style_0055EB113231879A5F91">
 		<Pair>
 			<key>normal</key>
-			<styleUrl>#__managed_style_11FBF9C10D3187A0E24D</styleUrl>
+			<styleUrl>#__managed_style_1A88B36BF031879A5F91</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#__managed_style_04F32847C43187A0E24E</styleUrl>
+			<styleUrl>#__managed_style_2C9E33D67631879A5F91</styleUrl>
 		</Pair>
 	</StyleMap>
-	<Placemark id="000CE4F0463187A0E24C">
-		<name>La Isla</name>
+	<Placemark id="0D14E5A94731879A5F8B">
+		<name>Hard Rock Cafe</name>
 		<LookAt>
-			<longitude>-89.59904592293152</longitude>
-			<latitude>21.0573717716362</latitude>
-			<altitude>9.138220653656079</altitude>
+			<longitude>-86.74707884303281</longitude>
+			<latitude>21.13254687465838</latitude>
+			<altitude>27.28245803906051</altitude>
 			<heading>0</heading>
 			<tilt>0</tilt>
 			<gx:fovy>35</gx:fovy>
-			<range>2496.451624788169</range>
+			<range>774.4465704156028</range>
 			<altitudeMode>absolute</altitudeMode>
 		</LookAt>
-		<styleUrl>#__managed_style_0D856552F93187A0E24D</styleUrl>
-		<Polygon>
-			<outerBoundaryIs>
-				<LinearRing>
-					<coordinates>
-						-89.59776344772115,21.05669279161269,0 -89.5981578919537,21.05505819991328,0 -89.59623397030535,21.05418353940793,0 -89.593427041041,21.05349632860895,0 -89.59305164971801,21.05524223850837,0 -89.59297761857034,21.05588681939197,0 -89.59500200034837,21.05623264997205,0 -89.59776344772115,21.05669279161269,0 
-					</coordinates>
-				</LinearRing>
-			</outerBoundaryIs>
-		</Polygon>
+		<styleUrl>#__managed_style_0055EB113231879A5F91</styleUrl>
+		<Point>
+			<coordinates>-86.74703305286377,21.13230128758341,29.79870973196419</coordinates>
+		</Point>
 	</Placemark>
 </Document>
 </kml>

@@ -12,22 +12,13 @@ export const MapFileContextProvider = (props) => {
 
   const onDrop = useCallback(
     (acceptedFiles, fileRejections) => {
-      console.log(`Archivos aceptados:}` + acceptedFiles);
       setValidateFile([...acceptedFiles]);
       setRejectedFiles([...fileRejections]);
-      // console.log(`Copia` + copyAcceptedFiles);
-      // acceptedFiles.forEach((file) => {
-      //   const reader = new FileReader();
-      //   reader.onload = () => {
-      //     const text = reader.result;
-      //     onFileLoad(text);
-      //   };
-      //   reader.readAsText(file);
-      // });
+      
     },
-    // [onFileLoad]
     []
   );
+
   const { getRootProps, getInputProps, isDragActive, fileRejections } =
     useDropzone({
       onDrop,
@@ -35,15 +26,15 @@ export const MapFileContextProvider = (props) => {
         "application/vnd.google-earth": [".kml"],
       },
     });
+
   const handleRenderMap = () => {
     setRenderMap(!renderMap);
-    console.log(validateFile);
-
-    if (renderMap) {
+      if (renderMap) {
       setValidateFile([]);
     }
     setRejectedFiles([]);
   };
+
   let data = {
     getRootProps,
     getInputProps,
@@ -54,6 +45,7 @@ export const MapFileContextProvider = (props) => {
     validateFile,
     rejectedFiles,
   };
+
   return (
     <MapFileContext.Provider value={data}>{children}</MapFileContext.Provider>
   );
