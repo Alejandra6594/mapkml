@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>La Isla</name>
+    <description/>
+    <Style id="poly-87CEAC-1200-77-nodesc-normal">
+      <LineStyle>
+        <color>ffacce87</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4dacce87</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-87CEAC-1200-77-nodesc-highlight">
+      <LineStyle>
+        <color>ffacce87</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4dacce87</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-87CEAC-1200-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-87CEAC-1200-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-87CEAC-1200-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Capa sin título</name>
+      <Placemark>
+        <name>La Isla</name>
+        <styleUrl>#poly-87CEAC-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -89.5982769,21.0552365,0
+                -89.5962599,21.0543154,0
+                -89.5949081,21.0548761,0
+                -89.5937279,21.0543754,0
+                -89.5925692,21.0539749,0
+                -89.5913032,21.054055,0
+                -89.5897368,21.0539349,0
+                -89.5883635,21.0546958,0
+                -89.5875481,21.0555369,0
+                -89.5877198,21.0563779,0
+                -89.5888356,21.0569987,0
+                -89.5902732,21.057219,0
+                -89.5915178,21.0575794,0
+                -89.5919469,21.0578798,0
+                -89.5927838,21.0578197,0
+                -89.5933846,21.0577997,0
+                -89.593921,21.0586007,0
+                -89.5942,21.0591213,0
+                -89.5949939,21.0595018,0
+                -89.595981,21.0599423,0
+                -89.596732,21.0602227,0
+                -89.5971397,21.0601426,0
+                -89.5974401,21.0586207,0
+                -89.597762,21.0569186,0
+                -89.5982769,21.0552365,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
