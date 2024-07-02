@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import "./App.css";
 import { FileUploader } from "./components/FileUploader/FileUploader";
 import { KmlMap } from "./components/KmlMap/KmlMap";
 import { MapFileContext } from "./context/MapFileContext";
 
+import "./App.css";
 function App() {
   const { renderMap } = useContext(MapFileContext);
   return (
@@ -20,8 +20,9 @@ function App() {
           mapa.
         </p>
       </header>
-
-      {renderMap ? <KmlMap /> : <FileUploader />}
+      <main className="main-content">
+        {renderMap ? <KmlMap /> : <FileUploader />}
+      </main>
     </section>
   );
 }

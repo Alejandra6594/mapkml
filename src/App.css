@@ -19,3 +19,9 @@ body {
     margin: 1rem 0;
   }
 }
+
+.main-content {
+  /* background-color: red; */
+  /* height: 90vh; */
+  overflow: hidden;
+}
