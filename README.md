@@ -1,8 +1,5 @@
-# React + Vite
+# MapKml by AlejandraBurgos🗺️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![MapKML Picture](https://github.com/Alejandra6594/mapkml/assets/75916617/562087b3-490e-427f-a97c-fe631b5440f5)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
