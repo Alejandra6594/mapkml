@@ -1,17 +1,63 @@
-.btn-newFiles {
+.header-kmlMap {
     background-color: #0000ff;
     color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    padding: .8rem;
-    margin: 1rem 0;
-    font-weight: 700;
 
-    transition: background-color .3s ease;
-
-    &:hover {
-        cursor: pointer;
-        background-color: #0000ff9e;
-        transition: background-color .3s ease;
+    .title-kmlMap {
+        margin: 0;
     }
+}
+
+.list-files-draw {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: .5rem 0;
+    padding: 0;
+
+    .item-files-draw {
+        list-style: none;
+        margin: 0;
+    }
+}
+
+.container-buttons-kmlMaps {
+    display: flex;
+    gap: 1rem;
+
+    .btn-newFiles {
+        background-color: #0000ffb3;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: .8rem;
+        margin: 1rem 0;
+        font-weight: 700;
+
+        transition: background-color .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #0000ff;
+            transition: background-color .3s ease;
+        }
+
+
+    }
+
+    .btn-newFile--query {
+
+        background-color: #fffb00da;
+        color: #000000;
+
+        &:hover {
+            cursor: pointer;
+
+            background-color: #fffb00;
+            transition: background-color .3s ease;
+        }
+
+    }
+
 }
