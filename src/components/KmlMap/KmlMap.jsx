@@ -13,9 +13,12 @@ import { MapFileContext } from "../../context/MapFileContext";
 import "./stylesKmlMaps.css";
 
 export const KmlMap = () => {
-  const { handleRenderMap, validateFile } = useContext(MapFileContext);
+  const { handleRenderMap, validateFile, handleExportDataSQL } =
+    useContext(MapFileContext);
+
   const [geojsonData, setGeojsonData] = useState([]);
   const newGeojsonData = [];
+
   useEffect(() => {
     if (validateFile.length < 0) return;
 
@@ -94,9 +97,10 @@ export const KmlMap = () => {
         <button className="btn-newFiles" onClick={handleRenderMap}>
           👈🏻Pintar nuevos archivos
         </button>
+
         <button
           className="btn-newFiles btn-newFile--query"
-          onClick={handleRenderMap}
+          onClick={() => handleExportDataSQL(geojsonData)}
         >
           📇Exportar query
         </button>

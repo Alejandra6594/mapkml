@@ -10,14 +10,10 @@ export const MapFileContextProvider = (props) => {
   const [validateFile, setValidateFile] = useState([]);
   const [rejectedFiles, setRejectedFiles] = useState([]);
 
-  const onDrop = useCallback(
-    (acceptedFiles, fileRejections) => {
-      setValidateFile([...acceptedFiles]);
-      setRejectedFiles([...fileRejections]);
-      
-    },
-    []
-  );
+  const onDrop = useCallback((acceptedFiles, fileRejections) => {
+    setValidateFile([...acceptedFiles]);
+    setRejectedFiles([...fileRejections]);
+  }, []);
 
   const { getRootProps, getInputProps, isDragActive, fileRejections } =
     useDropzone({
@@ -29,10 +25,18 @@ export const MapFileContextProvider = (props) => {
 
   const handleRenderMap = () => {
     setRenderMap(!renderMap);
-      if (renderMap) {
+    if (renderMap) {
       setValidateFile([]);
     }
     setRejectedFiles([]);
+  };
+
+  const handleExportDataSQL = (dataToExport) => {
+    console.log(dataToExport);
+    for (const iterator of dataToExport) {
+      console.log(iterator.features[0].geometry);
+      console.log(iterator.features[0].properties);
+    }
   };
 
   let data = {
@@ -44,6 +48,7 @@ export const MapFileContextProvider = (props) => {
     renderMap,
     validateFile,
     rejectedFiles,
+    handleExportDataSQL,
   };
 
   return (
