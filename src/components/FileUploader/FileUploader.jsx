@@ -4,7 +4,7 @@ import { AcceptedFile } from "../AcceptedFile/AcceptedFile";
 import { MapFileContext } from "../../context/MapFileContext";
 
 import "./FileUploaderStyles.css";
-export const FileUploader = ({ onFileLoad }) => {
+export const FileUploader = () => {
   const {
     getRootProps,
     getInputProps,
