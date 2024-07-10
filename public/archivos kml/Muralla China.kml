@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Muralla China</name>
+    <description/>
+    <Style id="line-B2EBF2-2163-nodesc-normal">
+      <LineStyle>
+        <color>fff2ebb2</color>
+        <width>2.163</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-B2EBF2-2163-nodesc-highlight">
+      <LineStyle>
+        <color>fff2ebb2</color>
+        <width>3.2445</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-B2EBF2-2163-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-B2EBF2-2163-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-B2EBF2-2163-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Capa sin título</name>
+      <Placemark>
+        <name>Muralla China</name>
+        <styleUrl>#line-B2EBF2-2163-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            116.5721755,40.4308863,0
+            116.5704589,40.4323236,0
+            116.5696006,40.4334995,0
+            116.5701156,40.4345448,0
+            116.5689998,40.4360474,0
+            116.5677982,40.43657,0
+            116.5680557,40.4379419,0
+            116.5671974,40.4387258,0
+            116.5672832,40.439967,0
+            116.5662532,40.4416654,0
+            116.5653091,40.4416654,0
+            116.563335,40.4432985,0
+            116.5627342,40.4447355,0
+            116.5611892,40.4460419,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
