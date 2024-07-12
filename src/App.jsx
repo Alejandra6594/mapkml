@@ -15,10 +15,8 @@ function App() {
           Este proyecto es una aplicación web desarrollada con React que permite
           a los usuarios cargar archivos KML (Keyhole Markup Language),
           visualizar su contenido geoespacial en un mapa interactivo y exportar
-          los datos geoespaciales a un script SQL. Utiliza react-dropzone para
-          crear una zona drag & drop, Leaflet para la visualización de mapas, la
-          biblioteca React Leaflet para proporcionar enlaces entre React y
-          Leaflet.
+          los datos geoespaciales a un script SQL para posteriormente ser guardados en una base de datos. Utiliza react-dropzone para
+          crear una zona drag & drop, Leaflet para la visualización de mapas, React Leaflet para abstraer las capas de Leaflet como componentes de React y la dependencia togeojson para representar elementos graficos sencillos en formato basado en JavaScript Objetc Notation.
         </p>
       </header>
       <main className="main-content">
